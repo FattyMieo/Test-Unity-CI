@@ -69,8 +69,8 @@ echo " "
 #echo " "
 
 echo "Attempting to zip builds"
-pushd $(pwd)/Build/windows
-zip -r $(pwd)/Build/windows.zip *
+pushd $(pwd)/Build
+zip -r windows.zip ./windows
 popd
 #zip -r $(pwd)/Build/windows.zip $(pwd)/Build/windows/
 #zip -r $(pwd)/Build/mac.zip $(pwd)/Build/osx/
