@@ -3,39 +3,39 @@
 project="Test-Unity-CI"
 
 echo "Attempting to build $project for Windows"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
-  -batchmode 
-  -nographics 
-  -silent-crashes 
-  -logFile $(pwd)/unity.log 
-  -projectPath $(pwd) 
-  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+  -batchmode \
+  -nographics \
+  -silent-crashes \
+  -logFile $(pwd)/unity.log \
+  -projectPath $(pwd) \
+  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
   -quit
 
 echo 'Logs from build (Windows)'
 cat $(pwd)/unity.log
 
 echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
-  -batchmode 
-  -nographics 
-  -silent-crashes 
-  -logFile $(pwd)/unity.log 
-  -projectPath $(pwd) 
-  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" 
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+  -batchmode \
+  -nographics \
+  -silent-crashes \
+  -logFile $(pwd)/unity.log \
+  -projectPath $(pwd) \
+  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" \
   -quit
 
 echo 'Logs from build (OS X)'
 cat $(pwd)/unity.log
 
 echo "Attempting to build $project for Linux"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
-  -batchmode 
-  -nographics 
-  -silent-crashes 
-  -logFile $(pwd)/unity.log 
-  -projectPath $(pwd) 
-  -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" 
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+  -batchmode \
+  -nographics \
+  -silent-crashes \
+  -logFile $(pwd)/unity.log \
+  -projectPath $(pwd) \
+  -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" \
   -quit
 
 echo 'Logs from build (Linux)'
