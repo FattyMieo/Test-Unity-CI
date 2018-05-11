@@ -70,8 +70,11 @@ echo " "
 
 echo "Attempting to zip builds"
 pushd ./Build
-zip -r windows.zip ./windows/*
+zip -r $project.zip ./windows/*
+#zip -r $project.zip ./osx/*
+#zip -r $project.zip ./linux/*
 popd
+
 #zip -r $(pwd)/Build/windows.zip $(pwd)/Build/windows/
 #zip -r $(pwd)/Build/mac.zip $(pwd)/Build/osx/
 #zip -r $(pwd)/Build/linux.zip $(pwd)/Build/linux/
