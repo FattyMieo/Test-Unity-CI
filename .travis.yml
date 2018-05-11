@@ -9,3 +9,11 @@ install:
 - ./install.sh
 script:
 - ./build.sh
+deploy:
+  provider: releases
+  api_key: "$GITHUB_OAUTH_TOKEN"
+#  file: "FILE TO UPLOAD"
+  local-dir: Build
+  skip_cleanup: true
+  on:
+    tags: true
