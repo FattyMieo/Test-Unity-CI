@@ -3,6 +3,9 @@ os: osx
 osx_image: xcode9.3
 rvm:
 - 2.2
+cache:
+  directories:
+    - /Applications/Unity
 before_install:
 - chmod a+x ./install.sh
 - chmod a+x ./build.sh
